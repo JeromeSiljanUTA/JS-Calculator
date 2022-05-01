@@ -1,11 +1,12 @@
 var toggleVal = "hide"; total = 0;
 
-function appendOne() {
-    total = (total * 10) + 1;
+function append(num) {
+    total = (total * 10) + num;
     document.getElementById('view').innerHTML = total;
 }
 
 function toggleVisibility() {
+    window.alert('clear');
     if(toggleVal == "show"){
         document.getElementById('view').style.display = 'block';
         toggleVal = "hide";
@@ -14,4 +15,13 @@ function toggleVisibility() {
         document.getElementById('view').style.display = 'none';
         toggleVal = "show";
     }
+}
+
+function clearView() {
+    total = 0;
+    document.getElementById('view').innerHTML = total;
+}
+
+function calculate(){
+    window.alert('calculate');
 }
